@@ -1,0 +1,35 @@
+Location Information
+County: Dane
+MLS Area: DANE - V
+Interior Features
+Number of Bedrooms: 2
+Primary Bedroom On Main: Yes
+Primary Bathroom Description: None
+1/2 Baths: 1
+Kitchen Description: Range/Oven, Refrigerator, Dishwasher
+Heating/Cooling: Forced air, Central air
+Fuel: Natural gas
+Basement Description: Full, Partially finished
+Exterior Features
+Style: Ranch
+Exterior: Vinyl, Aluminum/Steel, Stone
+Water: Municipal water, Municipal sewer
+Parking Description: 2 car, Attached
+Garage Spaces: 2
+Driveway: Paved
+Lot Size in Acres: 0.29
+Garage Description: 2 car, Attached
+Outdoor: Deck
+School
+School District: Lodi
+Elementary School: Lodi
+Jr. High School: Lodi
+High School: Lodi
+Additional Information
+Property Type: SFR
+Property SubType: Single Family
+Property SubType 2: 1 story
+Year Built: 1997
+Status: Active
+Tax Year: 2022
+Tax Amount: $5,313
