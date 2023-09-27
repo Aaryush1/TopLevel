@@ -32,7 +32,7 @@ memory = ChatMemoryBuffer.from_defaults(token_limit=2500)
 
 # TODO: Figure out how to wrap chat in template
 template = (
-    "Below is the information about the courses relavent to the student's query. \n"
+    "[TopLevel Information]. \n"
     "---------------------\n"
     "{context_str}"
     "\n---------------------\n"
@@ -47,7 +47,7 @@ nodes = parser.get_nodes_from_documents(documents)
 # index = VectorStoreIndex(nodes, show_progress=True)
 # index.storage_context.persist(persist_dir="./persist")
 
-storage_context = StorageContext.from_defaults(persist_dir="./backend/persist")
+storage_context = StorageContext.from_defaults(persist_dir="./persist")
 index = load_index_from_storage(storage_context)
 
 query_engine = index.as_chat_engine(
@@ -59,7 +59,12 @@ Highlight Marketable Features: Focus on the elements that make the property attr
 Be Clear and Concise: Make sure the listing is easy to read and understand, avoiding unnecessary jargon.
 Balance Detail and Brevity: Provide enough detail to interest potential renters or buyers, but keep it brief enough to ensure the listing is easily scannable.
 Adapt Style: If the property is luxurious, make the language upscale. If it's a cozy, family home, make the tone warm and inviting.
-Differentiate Between Rental and Sales: For rental properties, emphasize terms and pet policies. For properties for sale, provide information on the interior and exterior features, as well as school and tax details.",
+Differentiate Between Rental and Sales: For rental properties, emphasize terms and pet policies. For properties for sale, provide information on the interior and exterior features, as well as school and tax details.
+Here are some examples:
+Listing for a rental property:
+Welcome to 525 Hilldale Ct, located in the vibrant city of Madison, WI. This charming house offers a comfortable and convenient living experience with its 2 bedrooms and 2 bathrooms. The well-designed kitchen is equipped with a range/oven, dishwasher, and refrigerator, making meal preparation a breeze. You'll also appreciate the convenience of having a washer and dryer right in your unit, saving you time and effort. The private yard provides a peaceful outdoor space where you can relax and enjoy the fresh air. Nestled in a desirable location, this house offers easy access to a variety of amenities, including shopping, dining, and entertainment options. With its prime location and desirable features, 525 Hilldale Ct is the perfect place to call home. Don't miss out on this opportunity to experience comfortable and convenient living in Madison, WI
+Listing for a sales property:
+Welcome to this inviting two-story home in the popular Meadowood neighborhood.This home features really nice upgrades and updates:Real wood flooring; a cozy fireplace in the large gathering room; a beautifully updated kitchen with new cabinets,LVT flooring, granite counters, and stainless appliances;updated main level half bath; and many newer windows. Enjoy the spacious backyard from the sun-filled living room, 3-season room, and the gathering room.Plus there's a formal dining room. All 4 generously sized bedrooms on the 2nd flr have ample closet space.The lower level provides potential for customization and storage as well as laundry. The private fenced yard is great for outdoor enjoyment and the home's prime location offers easy access to parks. It's the perfect place to call home!
 """,
 )
 
