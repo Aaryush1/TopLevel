@@ -1,0 +1,21 @@
+RENT/BUY
+Price
+Location
+Bed/bath
+Building Sqft
+Lot Sqft
+Fireplace
+Central air
+Attic
+Basement
+Building configuration
+Garage size
+Pool
+Fenced yard
+Pets allowed
+Renovations
+Proximity to school
+Proximity to work
+Age of property
+Amenenties
+

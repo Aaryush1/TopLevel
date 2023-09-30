@@ -1,0 +1,3 @@
+Run regression on features to predict time on market
+Find subsect of data where listing description is in top-k
+Use those listing descriptions to fine tune model

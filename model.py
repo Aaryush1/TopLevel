@@ -25,7 +25,8 @@ from llama_index.prompts import (
     PromptTemplate,
 )
 
-llm = OpenAI(model="gpt-3.5-turbo", temperature=0, max_tokens=512)
+#
+llm = OpenAI(model="gpt-3.5-turbo-16k", temperature=0.4, max_tokens=512)
 service_context = ServiceContext.from_defaults(llm=llm)
 set_global_service_context(service_context)
 memory = ChatMemoryBuffer.from_defaults(token_limit=2500)
@@ -59,6 +60,7 @@ Highlight Marketable Features: Focus on the elements that make the property attr
 Be Clear and Concise: Make sure the listing is easy to read and understand, avoiding unnecessary jargon.
 Balance Detail and Brevity: Provide enough detail to interest potential renters or buyers, but keep it brief enough to ensure the listing is easily scannable.
 Adapt Style: If the property is luxurious, make the language upscale. If it's a cozy, family home, make the tone warm and inviting.
+If you do not have information about the property the user wants, say you don't have that information and ask for another query.
 Differentiate Between Rental and Sales: For rental properties, emphasize terms and pet policies. For properties for sale, provide information on the interior and exterior features, as well as school and tax details.
 Here are some examples:
 Listing for a rental property:
