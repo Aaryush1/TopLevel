@@ -25,7 +25,7 @@ from llama_index.prompts import (
     PromptTemplate,
 )
 
-#
+# gpt-4-0613
 llm = OpenAI(model="gpt-3.5-turbo-16k", temperature=0.4, max_tokens=512)
 service_context = ServiceContext.from_defaults(llm=llm)
 set_global_service_context(service_context)
